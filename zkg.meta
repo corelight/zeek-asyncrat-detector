@@ -1,0 +1,16 @@
+[package]
+script_dir = scripts
+test_command = cd testing && btest -c btest.cfg
+summary = An AsyncRAT malware detector.
+description = An AsyncRAT malware detector.
+depends = 
+	zeek >=4.0.0
+
+[template]
+source = https://github.com/zeek/package-template
+version = v3.1.0
+zkg_version = 2.13.0-46
+
+[template_vars]
+name = AsyncRAT
+
