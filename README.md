@@ -1,7 +1,6 @@
-AsyncRAT
-=================================
+# A Zeek Based AsyncRAT Malware Detector
 
-PCAP Sources:
+### PCAP Sources
 
 - AsyncRAT
   - https://app.any.run/tasks/cd010953-5faf-4054-86be-58c020c3a532/ 
