@@ -22,6 +22,10 @@ critical infrastructure in the United States.
 #close	2024-03-12-13-19-10
 ```
 
+### Suricata Rules
+
+You can find Suricata rules in the "suri" directory.
+
 ### PCAP Sources
 
 - AsyncRAT
