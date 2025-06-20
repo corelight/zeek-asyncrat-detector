@@ -5,7 +5,3 @@ alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"CORELIGHT AsyncRAT Style TLS 
 #   "subject": "CN=VenomRAT",
 #   "issuerdn": "CN=MONEY, OU=qwqdanchun, O=VenomRAT By qwqdanchun, L=SH, C=CN",
 alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"CORELIGHT AsyncRAT Variant Style TLS Certificate"; flow:established,to_client; tls.cert_issuer; content:"By|20|qwqdanchun"; reference:url,any.run/malware-trends/asyncrat; reference:url,github.com/qwqdanchun/DcRat/blob/30ca53b068b4ab7a2542835f7456abd26e1a0ed4/Server/Helper/CreateCertificate.cs#L32; classtype:trojan-activity; sid:3000066; rev:1;)
-#
-# QuasarRat
-# CN=SXN Server CA, self signed certificate
-alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"CORELIGHT QuasarRAT TLS Certificate"; flow:established,to_client; tls.cert_issuer; content:"CN=SXN|20|Server|20|CA"; bsize:16; tls.cert_subject; content:"CN=SXN|20|Server|20|CA"; bsize:16; reference:url,app.any.run/tasks/9596cf60-0da6-47a7-a375-1f25ae32d843/; classtype:trojan-activity; sid:3000067; rev:1;)
