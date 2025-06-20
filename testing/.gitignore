@@ -1,2 +1,4 @@
 .btest.failed.dat
 .tmp
+.DS_Store
+../.DS_Store
