@@ -9,3 +9,7 @@ alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"CORELIGHT AsyncRAT Variant St
 # QuasarRat
 # CN=SXN Server CA, self signed certificate
 alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"CORELIGHT QuasarRAT TLS Certificate"; flow:established,to_client; tls.cert_issuer; content:"CN=SXN|20|Server|20|CA"; bsize:16; tls.cert_subject; content:"CN=SXN|20|Server|20|CA"; bsize:16; reference:url,app.any.run/tasks/9596cf60-0da6-47a7-a375-1f25ae32d843/; classtype:trojan-activity; sid:3000067; rev:1;)
+#
+# BitRAT
+# TLS certificate with CN=BitRAT in subject or issuer
+alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"CORELIGHT BitRAT Style TLS Certificate"; flow:established,to_client; tls.cert_subject; content:"CN=BitRAT"; nocase; tls.cert_issuer;  content:"CN=BitRAT"; nocase; reference:url,any.run/malware-trends/bitrat; classtype:trojan-activity; sid:3000068; rev:1;)
