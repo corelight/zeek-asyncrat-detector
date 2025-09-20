@@ -1,8 +1,8 @@
 [package]
 script_dir = scripts
 test_command = cd testing && btest -c btest.cfg
-summary = An AsyncRAT malware detector.
-description = An AsyncRAT malware detector.
+summary = A Zeek based AsyncRAT malware detector.
+description = A Zeek based AsyncRAT malware detector.
 depends = 
 	zeek >=4.0.0
 
