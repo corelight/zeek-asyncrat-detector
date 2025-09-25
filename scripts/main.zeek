@@ -1,8 +1,11 @@
 module AsyncRAT;
 
 export {
-	## The notice when AsyncRAT C2 is observed.
-	redef enum Notice::Type += { C2_Traffic_Observed, };
+	redef enum Notice::Type += {
+		## This notice is generated when a connection is potentially AsyncRAT
+		## malware C2.
+		C2_Traffic_Observed,
+	};
 }
 
 # Where the magic happens.
